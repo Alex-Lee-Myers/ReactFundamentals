@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
 import MovieAppDisplay from './MovieAppDisplay/MovieAppDisplay';
 
-//TODO src\components\apps\the-movie-db\MovieApp.js
-// *  Line 24:118:  'query' is not defined      no-undef
-// *  Line 35:17:   'setResult' is not defined  no-undef
-
 const MovieApp = () => {
     const [result, setResult] = useState()
     const [query, setQuery] = useState('');

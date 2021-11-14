@@ -21,6 +21,11 @@ const LineChart = (props) => {
     }, [])
 
     useEffect(() => {
+        let clearDiv = document.getElementById("myDiv")
+        clearDiv.innerHTML = '';
+        let myCanvas = document.createElement("canvas")
+        clearDiv.appendChild(myCanvas)
+        myCanvas.setAttribute('id','myChart')
         var chartContext = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(chartContext, {
             type: 'line',
@@ -49,7 +54,7 @@ const LineChart = (props) => {
     }, [dates])
 
     return (
-        <canvas id='myChart'></canvas>
+        <div id='myDiv'></div>
     )
 }
 
